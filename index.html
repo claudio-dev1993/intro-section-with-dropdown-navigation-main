@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js"></script>
+  <title>Intro section with dropdown navigation</title>
+</head>
+
+<body>
+
+  <div id="app">
+
+    <nav class="navbar">
+
+      <span class="navbar-logo">
+        <a href="#" class="navbar-logo__image">Logo</a>
+      </span>
+
+      <span class="navbar-menu">
+        <button class="navbar-menu__button" onclick="openNav()">Menu</button>
+      </span>
+
+      <span class="navbar-links" id="navLinks">
+
+        <div class="navbar-options">
+
+          <a href="#" class="navbar-options__close">&times;</a>
+          <a href="#" class="navbar-options__link navbar-options__link--dropdown">Features</a>
+          <nav class="navbar-dropdown-menu">
+            <a href="#" class="navbar-dropdown-menu__link">link</a>
+            <a href="#" class="navbar-dropdown-menu__link">link</a>
+            <a href="#" class="navbar-dropdown-menu__link">link</a>
+            <a href="#" class="navbar-dropdown-menu__link">link</a>
+          </nav>
+
+          <a href="#" class="navbar-options__link navbar-options__link--dropdown">Company</a>
+          <nav class="navbar-dropdown-menu">
+            <a href="#" class="navbar-dropdown-menu__link">link</a>
+            <a href="#" class="navbar-dropdown-menu__link">link</a>
+            <a href="#" class="navbar-dropdown-menu__link">link</a>
+          </nav>
+
+          <a href="#" class="navbar-options__link">Careers</a>
+          <a href="#" class="navbar-options__link">About</a> 
+        </div>
+
+        <div class="navbar-account">
+          <a href="#" class="navbar-account__link">Login</a>
+          <a href="#" class="navbar-account__link navbar-account__link--outline">Register</a>
+        </div>
+
+      </span>
+    </nav>
+
+    <main>
+
+        <section>
+          <img src="#" alt="hero">
+        </section>
+
+        <section>
+          <header>
+            <h1>Make remote work</h1>
+          </header>
+
+          <article>
+            <p>Get your team in sync, no matter your location. Streamline processes,
+              create team rituals, and watch productivity soar.</p>
+          </article>
+
+          <div>
+            <a href="#">Learn more</a>
+          </div>
+
+        </section> 
+
+    </main>
+
+    <footer>
+      <div>
+
+      </div>
+
+      <div class="attribution">
+        <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </span>
+        <span>Coded by <a href="#">Your Name Here</a>.</span>
+      </div>
+    </footer>
+
+  </div>
+
+</body>
+
+</html>
