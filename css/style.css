@@ -18,20 +18,27 @@ a {
     text-decoration: none;
 }
 
-#app { /*body*/
+#app {
+    /*body*/
     min-height: 100vh;
     font-family: 'Epilogue';
-    font-size: 18px;
+    font-size: 1rem;
     display: grid;
-
 }
+
+/*------navbar-------*/
 
 .navbar {
-    min-height: 2.1rem ;
+    min-height: 2.1rem;
     padding: 1rem;
     display: flex;
+    position: relative;
     justify-content: space-between;
 }
+
+.navbar__logo {}
+
+.navbar__menu {}
 
 .navbar-links {
     height: 100%;
@@ -46,28 +53,108 @@ a {
     transition: 0.5s;
 }
 
+.navbar-links a {
+    color: var(--Medium-Gray);
+}
+
+.navbar-options {
+    min-width: 195px;
+}
+
 .navbar-options__link {
-    display: flex;
-    flex-direction: column;
-    padding: 0 145px 0 24px;
+    margin: 0 145px 24px 24px;
     display: block;
     transition: 0.3s;
-
 }
+
+.navbar-options__link--dropdown {
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-options__link--dropdown::after {
+    content: url("/images/icon-arrow-down.svg");
+}
+
 
 .navbar-options__close {
     position: absolute;
     top: 0;
     left: 25px;
     font-size: 36px;
-    margin-left: 195px;
+    margin: 21px 20px 0 175px;
+    content: url('/images/icon-close-menu.svg');
 }
 
-.navbar-dropdown-menu {
+.navbar-options__close:hover {
+    border: 1px solid var(--Almost-Black);
+    border-radius: .2rem;
+    padding: .2rem;
+    transition: 0.5s;
+}
+
+.navbar-account {
+    margin-top: 32px;
+}
+
+.navbar-account__link {
+    min-width: 195px;
+    min-height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-account__link--outline {
+    border: 1px solid var(--Medium-Gray);
+    border-radius: .9rem;
+}
+
+.navbar-account__link--outline:hover {
+    border: 1px solid var(--Almost-Black);
+    transition: 0.5s;
+    color: var(--Almost-Black);
+}
+
+.show-menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: 0.9s;
+}
+
+.hide-menu {
     display: none;
+    transition: 0.9s;
+}
+
+.navbar-dropdown-menu__link {
+    width: 106px;
+    display: flex;
+    gap: .9rem;
+    margin-bottom: 1rem;
+}
+
+.navbar-dropdown-menu__link:hover {
+    padding-left: 6px;
+    transition: 0.5s;
+}
+
+.menu__link--todo::before {
+    content: url('/images/icon-todo.svg');
+}
+
+.menu__link--calendar::before {
+    content: url('/images/icon-calendar.svg');
+}
+
+.menu__link--reminder::before {
+    content: url('/images/icon-reminders.svg');
+}
+
+.menu__link--planning::before {
+    content: url('/images/icon-planning.svg');
 }
 
 .navbar-account {

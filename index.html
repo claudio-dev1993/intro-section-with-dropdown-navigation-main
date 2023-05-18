@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
-  <script src="./js/script.js"></script>
+  <script src="./js/script.js" defer></script>
   <title>Intro section with dropdown navigation</title>
 </head>
 
@@ -16,32 +16,29 @@
 
     <nav class="navbar">
 
-      <span class="navbar-logo">
-        <a href="#" class="navbar-logo__image">Logo</a>
-      </span>
+      <a href="#" class="navbar__logo">Logo</a>
 
-      <span class="navbar-menu">
-        <button class="navbar-menu__button" onclick="openNav()">Menu</button>
-      </span>
-
+      <button class="navbar__menu" id="openMenu">Menu</button>
+ 
       <span class="navbar-links" id="navLinks">
 
         <div class="navbar-options">
 
-          <a href="#" class="navbar-options__close">&times;</a>
-          <a href="#" class="navbar-options__link navbar-options__link--dropdown">Features</a>
-          <nav class="navbar-dropdown-menu">
-            <a href="#" class="navbar-dropdown-menu__link">link</a>
-            <a href="#" class="navbar-dropdown-menu__link">link</a>
-            <a href="#" class="navbar-dropdown-menu__link">link</a>
-            <a href="#" class="navbar-dropdown-menu__link">link</a>
+          <a href="#" class="navbar-options__close" id="closeMenu">&times;</a>
+
+          <a href="#" class="navbar-options__link navbar-options__link--dropdown" id="features">Features</a>
+          <nav class="navbar-menu__features hide-menu">
+            <a href="#" class="navbar-dropdown-menu__link menu__link--todo">Todo List</a>
+            <a href="#" class="navbar-dropdown-menu__link menu__link--calendar">Calendar</a>
+            <a href="#" class="navbar-dropdown-menu__link menu__link--reminder">Reminders</a>
+            <a href="#" class="navbar-dropdown-menu__link menu__link--planning">Planning</a>
           </nav>
 
-          <a href="#" class="navbar-options__link navbar-options__link--dropdown">Company</a>
-          <nav class="navbar-dropdown-menu">
-            <a href="#" class="navbar-dropdown-menu__link">link</a>
-            <a href="#" class="navbar-dropdown-menu__link">link</a>
-            <a href="#" class="navbar-dropdown-menu__link">link</a>
+          <a href="#" class="navbar-options__link navbar-options__link--dropdown" id="company">Company</a>
+          <nav class="navbar-menu__company hide-menu">
+            <a href="#" class="navbar-dropdown-menu__link">History</a>
+            <a href="#" class="navbar-dropdown-menu__link">Our Team</a>
+            <a href="#" class="navbar-dropdown-menu__link">Blog</a>
           </nav>
 
           <a href="#" class="navbar-options__link">Careers</a>
