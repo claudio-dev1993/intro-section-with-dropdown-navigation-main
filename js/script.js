@@ -15,26 +15,24 @@ document.getElementById('closeMenu').addEventListener('click', () => {
     closeNav()
 })
 
-function openDropdown() {
-    document.querySelector('.navbar-dropdown-menu').classList.add('show')
-}
-
 document.getElementById('features').addEventListener('click', () => {
-    if (document.querySelector('.navbar-menu__features').classList.contains('hide-menu')) {
-        document.querySelector('.navbar-menu__features').classList.add('show-menu')
-        document.querySelector('.navbar-menu__features').classList.remove('hide-menu')
+    const menuFeatures = document.querySelector('.navbar-menu__features')
+    if (menuFeatures.classList.contains('hide-menu')) {
+        menuFeatures.classList.add('show-menu')
+        menuFeatures.classList.remove('hide-menu')
     } else {
-        document.querySelector('.navbar-menu__features').classList.add('hide-menu')
-        document.querySelector('.navbar-menu__features').classList.remove('show-menu')
+        menuFeatures.classList.add('hide-menu')
+        menuFeatures.classList.remove('show-menu')
     }
 })
 
 document.getElementById('company').addEventListener('click', () => {
-    if (document.querySelector('.navbar-menu__company').classList.contains('hide-menu')) {
-        document.querySelector('.navbar-menu__company').classList.add('show-menu')
-        document.querySelector('.navbar-menu__company').classList.remove('hide-menu')
+    const menuCompany = document.querySelector('.navbar-menu__company')
+    if (menuCompany.classList.contains('hide-menu')) {
+        menuCompany.classList.add('show-menu')
+        menuCompany.classList.remove('hide-menu')
     } else {
-        document.querySelector('.navbar-menu__company').classList.add('hide-menu')
-        document.querySelector('.navbar-menu__company').classList.remove('show-menu')
+        menuCompany.classList.add('hide-menu')
+        menuCompany.classList.remove('show-menu')
     }
 })

@@ -16,15 +16,15 @@
 
     <nav class="navbar">
 
-      <a href="#" class="navbar__logo">Logo</a>
+      <a href="#" class="navbar__logo" aria-label="logo"></a>
 
-      <button class="navbar__menu" id="openMenu">Menu</button>
+      <button class="navbar__menu" id="openMenu" aria-label="open-menu"></button>
  
       <span class="navbar-links" id="navLinks">
 
         <div class="navbar-options">
 
-          <a href="#" class="navbar-options__close" id="closeMenu">&times;</a>
+          <a href="#" class="navbar-options__close" id="closeMenu" aria-label="close-menu">&times;</a>
 
           <a href="#" class="navbar-options__link navbar-options__link--dropdown" id="features">Features</a>
           <nav class="navbar-menu__features hide-menu">
@@ -53,36 +53,37 @@
       </span>
     </nav>
 
-    <main>
+    <main class="main">
 
-        <section>
-          <img src="#" alt="hero">
-        </section>
+        <picture class="main-image">
+          <source media="(min-witdh: 768px)" srcset="./images/image-hero-desktop.png 768w">
+          <img src="/images/image-hero-mobile.png" alt="a man with a laptop" width="375px" class="main-image__hero">
+        </picture>
 
-        <section>
+        <section class="main-content">
           <header>
-            <h1>Make remote work</h1>
+            <h1 class="main-content__header">Make remote work</h1>
           </header>
 
           <article>
-            <p>Get your team in sync, no matter your location. Streamline processes,
+            <p class="main-content__text">Get your team in sync, no matter your location. Streamline processes,
               create team rituals, and watch productivity soar.</p>
           </article>
 
           <div>
-            <a href="#">Learn more</a>
+            <a class="main-content__button" href="#">Learn more</a>
           </div>
 
         </section> 
 
     </main>
 
-    <footer>
-      <div>
-
+    <footer class="footer">
+      <div class="footer-supporters">
+          <a href="">databiz</a><a href="">audiophile</a><a href="">meet</a><a href="">maker</a> 
       </div>
 
-      <div class="attribution">
+      <div class="footer-attribution">
         <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </span>
         <span>Coded by <a href="#">Your Name Here</a>.</span>
       </div>
