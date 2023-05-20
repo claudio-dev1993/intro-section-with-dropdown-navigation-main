@@ -1,7 +1,8 @@
 
 function openNav() {
     document.getElementById('navLinks').style.width = '240px'
-    document.body.style.backgroundColor = "rgba(0,0,0,0.75)";
+    document.querySelector('.navbar__collapse').style.width = '100%'
+    document.querySelector('.navbar__collapse').style.backgroundColor = "rgba(0,0,0,0.75)";
 }
 document.getElementById('openMenu').addEventListener('click', () => {
     openNav()
@@ -9,7 +10,7 @@ document.getElementById('openMenu').addEventListener('click', () => {
 
 function closeNav() {
     document.getElementById('navLinks').style.width = '0'
-    document.body.style.backgroundColor = "#fff";
+    document.querySelector('.navbar__collapse').style.width = '0'
 }
 document.getElementById('closeMenu').addEventListener('click', () => {
     closeNav()
