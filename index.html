@@ -18,37 +18,50 @@
 
       <a href="#" class="navbar__logo" aria-label="logo"></a>
 
-      <button class="navbar__menu" id="openMenu" aria-label="open-menu"></button>
+      <button class="navbar__menu-button" id="openMenu" aria-label="open-menu"></button>
 
       <span class="navbar__collapse"></span>
-      
+
       <span class="navbar-links" id="navLinks">
 
         <div class="navbar-options">
 
-          <a href="#" class="navbar-options__close" id="closeMenu" aria-label="close-menu">&times;</a>
+          <button class="navbar-options__close" id="closeMenu" aria-label="close-menu"></button>
 
-          <a href="#" class="navbar-options__link navbar-options__link--dropdown" id="features">Features</a>
-          <nav class="navbar-menu__features hide-menu">
-            <a href="#" class="navbar-dropdown-menu__link menu__link--todo">Todo List</a>
-            <a href="#" class="navbar-dropdown-menu__link menu__link--calendar">Calendar</a>
-            <a href="#" class="navbar-dropdown-menu__link menu__link--reminder">Reminders</a>
-            <a href="#" class="navbar-dropdown-menu__link menu__link--planning">Planning</a>
-          </nav>
+          <button class="navbar-options__button navbar-options__link--dropdown" id="features">Features</button>
+          <ul class="navbar-dropdown-menu__features hide-menu">
+            <li>
+              <a href="#" class="navbar-dropdown-menu__link menu__link--todo">Todo List</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-dropdown-menu__link menu__link--calendar">Calendar</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-dropdown-menu__link menu__link--reminder">Reminders</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-dropdown-menu__link menu__link--planning">Planning</a>
+            </li>
+          </ul>
 
-          <a href="#" class="navbar-options__link navbar-options__link--dropdown" id="company">Company</a>
-          <nav class="navbar-menu__company hide-menu">
-            <a href="#" class="navbar-dropdown-menu__link">History</a>
-            <a href="#" class="navbar-dropdown-menu__link">Our Team</a>
-            <a href="#" class="navbar-dropdown-menu__link">Blog</a>
-          </nav>
+          <button class="navbar-options__button navbar-options__link--dropdown" id="company">Company</button>
+          <ul class="navbar-dropdown-menu__company hide-menu">
+            <li>
+              <a href="#" class="navbar-dropdown-menu__link">History</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-dropdown-menu__link">Our Team</a>
+            </li>
+            <li>
+              <a href="#" class="navbar-dropdown-menu__link">Blog</a>
+            </li>
+          </ul>
 
           <a href="#" class="navbar-options__link">Careers</a>
-          <a href="#" class="navbar-options__link">About</a> 
+          <a href="#" class="navbar-options__link">About</a>
         </div>
 
         <div class="navbar-account">
-
           <a href="#" class="navbar-account__link">Login</a>
           <a href="#" class="navbar-account__link navbar-account__link--outline">Register</a>
         </div>
@@ -58,35 +71,36 @@
 
     <main class="main">
 
-        <figure class="main-image">
-          <img alt="a man with a laptop"  class="main-image__hero">
-        </figure>
+      <figure class="main-image">
+        <img alt="a man with a laptop" class="main-image__hero">
+      </figure>
 
-        <section class="main-content">
-          <header>
-            <h1 class="main-content__header">Make remote work</h1>
-          </header>
+      <section class="main-content">
+        <header>
+          <h1 class="main-content__header">Make remote work</h1>
+        </header>
 
-          <article>
-            <p class="main-content__text">Get your team in sync, no matter your location. Streamline processes,
-              create team rituals, and watch productivity soar.</p>
-          </article>
+        <article>
+          <p class="main-content__text">Get your team in sync, no matter your location. Streamline processes,
+            create team rituals, and watch productivity soar.</p>
+        </article>
 
-          <div>
-            <a class="main-content__button" href="#">Learn more</a>
-          </div>
+        <div>
+          <a class="main-content__button" href="#">Learn more</a>
+        </div>
 
-        </section> 
+      </section>
 
     </main>
 
     <footer class="footer">
       <div class="footer-supporters">
-          <a href="">databiz</a><a href="">audiophile</a><a href="">meet</a><a href="">maker</a> 
+        <a href="">databiz</a><a href="">audiophile</a><a href="">meet</a><a href="">maker</a>
       </div>
 
       <div class="footer-attribution">
-        <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. </span>
+        <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        </span>
         <span>Coded by <a href="#">Your Name Here</a>.</span>
       </div>
     </footer>

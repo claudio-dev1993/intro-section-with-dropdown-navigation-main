@@ -63,7 +63,7 @@ a {
     height:35px;
 }
 
-.navbar__menu {
+.navbar__menu-button {
     background: url('/images/icon-menu.svg') no-repeat;
     border: none;
     background-color: transparent;
@@ -106,7 +106,12 @@ a {
     min-width: 195px;
 }
 
-.navbar-options__link {
+.navbar-options li {
+    list-style: none;
+}
+
+.navbar-options__link,
+.navbar-options__button {
     margin: 0 145px 24px 24px;
     display: block;
     transition: 0.3s;
@@ -128,13 +133,21 @@ a {
     content: url("/images/icon-arrow-down.svg");
 }
 
-.navbar-options__close {
+.navbar-options__button {
+    font-family: 'Epilogue';
+    font-size: 1rem;
+    color: var(--Medium-Gray);
+    border: none;
+    background: transparent;
+}
+
+.navbar-options__close::after {
+    content: url('/images/icon-close-menu.svg');
     position: absolute;
     top: 0;
     left: 25px;
     font-size: 36px;
     margin: 21px 20px 0 175px;
-    content: url('/images/icon-close-menu.svg');
 }
 
 .navbar-options__close:hover {

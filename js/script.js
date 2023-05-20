@@ -17,7 +17,7 @@ document.getElementById('closeMenu').addEventListener('click', () => {
 })
 
 document.getElementById('features').addEventListener('click', () => {
-    const menuFeatures = document.querySelector('.navbar-menu__features')
+    const menuFeatures = document.querySelector('.navbar-dropdown-menu__features')
     if (menuFeatures.classList.contains('hide-menu')) {
         menuFeatures.classList.add('show-menu')
         menuFeatures.classList.remove('hide-menu')
@@ -28,7 +28,7 @@ document.getElementById('features').addEventListener('click', () => {
 })
 
 document.getElementById('company').addEventListener('click', () => {
-    const menuCompany = document.querySelector('.navbar-menu__company')
+    const menuCompany = document.querySelector('.navbar-dropdown-menu__company')
     if (menuCompany.classList.contains('hide-menu')) {
         menuCompany.classList.add('show-menu')
         menuCompany.classList.remove('hide-menu')
