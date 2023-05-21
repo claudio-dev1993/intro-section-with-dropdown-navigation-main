@@ -5,7 +5,6 @@
     --Almost-White: hsl(0, 0%, 98%);
     --Medium-Gray: hsl(0, 0%, 41%);
     --Almost-Black: hsl(0, 0%, 8%);
-
 }
 
 * {
@@ -18,24 +17,24 @@ a {
     text-decoration: none;
 }
 
+/*-------app-container------*/
 
 #app {
     min-height: 100vh;
     font-family: 'Epilogue';
     font-size: 1rem;
-
     display: grid;
     grid-template-rows: auto 1fr auto;
     grid-template-columns: 1fr;
-    grid-template-areas: 
-    "navbar"
-    "main"
-    "footer";
+    grid-template-areas:
+        "navbar"
+        "main"
+        "footer";
 }
 
 /*-----grid-areas----*/
 .navbar {
-    grid-area: 'navbar';  
+    grid-area: 'navbar';
 }
 
 .main {
@@ -54,25 +53,37 @@ a {
     position: relative;
     justify-content: space-between;
     align-items: center;
-    
+
 }
 
 .navbar__logo {
     content: url('/images/logo.svg');
-    width: 87px;
-    height:35px;
+    width: 5.43rem;
+    height: 2.18;
 }
 
 .navbar__menu-button {
     background: url('/images/icon-menu.svg') no-repeat;
     border: none;
     background-color: transparent;
-    width: 32px;
-    height: 18px;
+    width: 2rem;
+    height: 1.12rem;
 }
 
-.navbar__menu:hover {
+.navbar__menu-button:hover {
     cursor: pointer;
+}
+
+.show-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.9s;
+}
+
+.hide-menu {
+    display: none;
+    transition: 0.9s;
 }
 
 .navbar__collapse {
@@ -94,7 +105,7 @@ a {
     top: 0;
     right: 0;
     overflow-x: hidden;
-    padding-top: 78px;
+    padding-top: 4.87rem;
     transition: 0.5s;
 }
 
@@ -102,8 +113,22 @@ a {
     color: var(--Medium-Gray);
 }
 
+/*-----dropdown-menu-------*/
+
+.navbar-dropdown-menu__link {
+    width: 6.62rem;
+    display: flex;
+    gap: .9rem;
+    margin-bottom: 1rem;
+}
+
+.navbar-dropdown-menu__link:hover {
+    padding-left: 0.37rem;
+    transition: 0.5s;
+}
+
 .navbar-options {
-    min-width: 195px;
+    min-width: 12.18rem;
 }
 
 .navbar-options li {
@@ -112,19 +137,21 @@ a {
 
 .navbar-options__link,
 .navbar-options__button {
-    margin: 0 145px 24px 24px;
+    margin: 0 9.06rem 1.5rem 1.5rem;
     display: block;
     transition: 0.3s;
 }
 
+.navbar-options__button:hover,
 .navbar-options__link:hover {
+    cursor: pointer;
     color: var(--Almost-Black);
     padding: .2rem;
     transition: 0.5s;
 }
 
 .navbar-options__link--dropdown {
-    width: 100px;
+    width: 6.25rem;
     display: flex;
     justify-content: space-between;
 }
@@ -141,29 +168,40 @@ a {
     background: transparent;
 }
 
-.navbar-options__close::after {
-    content: url('/images/icon-close-menu.svg');
+/*-----close-menu-----*/
+
+.navbar-options__close {
     position: absolute;
     top: 0;
-    left: 25px;
-    font-size: 36px;
-    margin: 21px 20px 0 175px;
+    left: 1.56rem;
+    font-size: 2.25rem;
+    margin: 1.31rem 1.25rem 0 10.93rem;
+    border: none;
+    background: transparent;
+}
+
+.navbar-options__close::after {
+    content: url('/images/icon-close-menu.svg');
 }
 
 .navbar-options__close:hover {
+    cursor: pointer;
     border: 1px solid var(--Almost-Black);
     border-radius: .2rem;
-    padding: .2rem;
+    padding:  0 .2rem; 
     transition: 0.5s;
 }
 
 .navbar-account {
-    margin-top: 32px;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .navbar-account__link {
-    min-width: 195px;
-    min-height: 42px;
+    min-width: 12.18rem;
+    min-height: 2.62rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -178,30 +216,6 @@ a {
     border: 1px solid var(--Almost-Black);
     transition: 0.5s;
     color: var(--Almost-Black);
-}
-
-.show-menu {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: 0.9s;
-}
-
-.hide-menu {
-    display: none;
-    transition: 0.9s;
-}
-
-.navbar-dropdown-menu__link {
-    width: 106px;
-    display: flex;
-    gap: .9rem;
-    margin-bottom: 1rem;
-}
-
-.navbar-dropdown-menu__link:hover {
-    padding-left: 6px;
-    transition: 0.5s;
 }
 
 .menu__link--todo::before {
@@ -220,32 +234,17 @@ a {
     content: url('/images/icon-planning.svg');
 }
 
-.navbar-account {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 /*-------main-content-------*/
-
-.main {
-    position: relative;
-    z-index: 0;
-}
-
-.main-image {
-    min-height: 281px;
-}
 
 .main-image__hero {
     content: url("/images/image-hero-mobile.png");
     max-width: 100%;
-    
+    min-height: 17.56rem;
 }
 
 .main-content {
-    min-height: 208px;
-    padding: 48px 16px  48px 16px;
+    min-height: 13rem;
+    padding: 3rem 1rem 3rem 1rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -254,7 +253,7 @@ a {
 
 
 .main-content__header {
-   font-size: 2.1rem;
+    font-size: 2.1rem;
 }
 
 
@@ -262,32 +261,58 @@ a {
     text-align: center;
     font-size: 1rem;
     color: var(--Medium-Gray);
-    margin: 24px 0;
+    margin: 1.5rem 0;
 }
 
 
 .main-content__button {
-    width: 136px;
+    width: 8.5rem;
     background-color: var(--Almost-Black);
-    padding: 12px 24px;
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
     color: var(--Almost-White);
-    border-radius: .9rem ;
+    border-radius: .9rem;
 }
 
-.footer-supporters {
-    display: flex;
-    justify-content: space-evenly;
+.main-content__button:hover {
+    background-color: var(--Almost-White);
+    border: 1px solid var(--Almost-Black);
+    color: var(--Almost-Black);
+    transition: 0.5s;
 }
+
+/*-----footer-----*/
+
+.footer-client-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.footer-client-list li {
+    list-style: none;
+
+}
+
+.footer-client-list img {
+    width: 90%;
+}
+
 
 .footer-attribution {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1rem;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
+}
+
+.footer-attribution a {
+    color: var(--Almost-Black);
+    font-size: 0.8rem;
 }
 
 
 
-
-@media screen and (min-width: 768px) {
-    
-}
+@media screen and (min-width: 768px) {}

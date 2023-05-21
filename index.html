@@ -16,15 +16,15 @@
 
     <nav class="navbar">
 
-      <a href="#" class="navbar__logo" aria-label="logo"></a>
+      <a href="#" class="navbar__logo" aria-label="logo snap"></a>
 
-      <button class="navbar__menu-button" id="openMenu" aria-label="open-menu"></button>
+      <button class="navbar__menu-button" id="openMenu" aria-label="open menu button"></button>
 
-      <span class="navbar__collapse"></span>
+      <span class="navbar__collapse" aria-hidden="true"></span>
 
-      <span class="navbar-links" id="navLinks">
+      <nav class="navbar-links" id="navLinks">
 
-        <div class="navbar-options">
+        <nav class="navbar-options">
 
           <button class="navbar-options__close" id="closeMenu" aria-label="close-menu"></button>
 
@@ -59,20 +59,20 @@
 
           <a href="#" class="navbar-options__link">Careers</a>
           <a href="#" class="navbar-options__link">About</a>
-        </div>
+        </nav>
 
         <div class="navbar-account">
           <a href="#" class="navbar-account__link">Login</a>
           <a href="#" class="navbar-account__link navbar-account__link--outline">Register</a>
         </div>
 
-      </span>
+      </nav>
     </nav>
 
-    <main class="main">
+    <main>
 
-      <figure class="main-image">
-        <img alt="a man with a laptop" class="main-image__hero">
+      <figure>
+        <img src="#" class="main-image__hero" alt="a man with a laptop" >
       </figure>
 
       <section class="main-content">
@@ -80,29 +80,38 @@
           <h1 class="main-content__header">Make remote work</h1>
         </header>
 
-        <article>
+        <div>
           <p class="main-content__text">Get your team in sync, no matter your location. Streamline processes,
             create team rituals, and watch productivity soar.</p>
-        </article>
+        </div>
 
         <div>
           <a class="main-content__button" href="#">Learn more</a>
         </div>
-
       </section>
 
     </main>
 
     <footer class="footer">
-      <div class="footer-supporters">
-        <a href="">databiz</a><a href="">audiophile</a><a href="">meet</a><a href="">maker</a>
-      </div>
+      <ul class="footer-client-list">
+        <li>
+          <img src="/images/client-databiz.svg" alt="client databiz">
+        </li>
+        <li>
+          <img src="/images/client-audiophile.svg" alt="client audiophile">
+        </li>
+        <li>
+          <img src="/images/client-meet.svg" alt="client meet">
+        </li>
+        <li>
+          <img src="/images/client-maker.svg" alt="client maker">
+        </li>
+      </ul>
 
-      <div class="footer-attribution">
-        <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-        </span>
-        <span>Coded by <a href="#">Your Name Here</a>.</span>
-      </div>
+      <span class="footer-attribution">
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+        <a href="https://github.com/claudio-dev1993?tab=repositories" target="_blank">Claudio Roberto</a>
+      </span>
     </footer>
 
   </div>
