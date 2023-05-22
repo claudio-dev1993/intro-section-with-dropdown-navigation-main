@@ -43,6 +43,7 @@ a {
 
 .footer {
     grid-area: 'footer';
+    
 }
 
 /*------navbar-------*/
@@ -53,7 +54,6 @@ a {
     position: relative;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .navbar__logo {
@@ -211,6 +211,12 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.navbar-account__link:hover:not(
+.navbar-account__link--outline ) {
+    text-decoration: underline;
+    transition: 0.6s;
 }
 
 .navbar-account__link--outline {
@@ -436,5 +442,127 @@ a {
         font-size: 1.4rem;
     }
     
+    
+}
+
+@media screen and (min-width: 1024px) {
+
+    /*---app-container---*/
+    #app {
+        grid-template-rows: auto 1fr auto;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "navbar  navbar"
+        "main    main"
+        "footer footer";
+    }
+
+    /*---navbar---*/ 
+
+    .navbar-account {
+        margin-top: 0;
+        flex-direction: row;
+    }
+
+    .navbar-account__link {
+        min-width: 104px;
+        min-height: 42px;
+        font-size: 14px;
+        margin: 0 20px 0 0;
+    }
+
+    .navbar-dropdown-menu__features,
+    .navbar-dropdown-menu__company {
+        position: fixed;
+        z-index: 1;
+        border-radius: .8rem ;
+        background-color: var(--Almost-White);
+        box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.149126);
+        
+    }
+
+    .navbar-dropdown-menu__features a,
+    .navbar-dropdown-menu__company a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-dropdown-menu__features {
+        top: 65px;
+        left: 125px;
+        width: 153px;
+        height: 160px;
+    }
+
+    .navbar-dropdown-menu__company {
+        top: 65px;
+        left: 320px;
+        width: 116px;
+        height: 128px;
+    }
+
+    .navbar-dropdown-menu__link {
+        
+        font-size: 14px;
+        margin: .6rem ;
+    }
+
+    .navbar-options {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .navbar-options__close {
+        display: none;
+    }
+
+    .navbar-options__link,
+    .navbar-options__button {
+        font-size: 14px;
+        margin: 0 20px;
+    }
+
+    .navbar-options__link--dropdown {
+        width: 79px ;
+    }
+
+    .navbar-links {
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: inherit;
+        position: static;
+        z-index: 0;
+        padding-top: 0;
+        background-color: inherit;
+    }
+
+    .navbar__logo {
+        min-width: 83px;
+        min-height: 26px;
+        margin: 0 40px;
+    }
+
+    .navbar {
+        position: static;
+        justify-content: space-between;
+    }
+
+    .navbar__menu-button,
+    .navbar__collapse {
+        display: none;
+    }
+
+
+    /*---main---*/
+    .main {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
     
 }
