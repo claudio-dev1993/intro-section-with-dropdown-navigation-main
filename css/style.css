@@ -465,10 +465,10 @@ a {
     }
 
     .navbar-account__link {
-        min-width: 104px;
-        min-height: 42px;
-        font-size: 14px;
-        margin: 0 20px 0 0;
+        min-width: 6.5rem;
+        min-height: 2.62rem;
+        font-size: 0.87rem;
+        margin: 0 1.25rem 0 0;
     }
 
     .navbar-dropdown-menu__features,
@@ -488,22 +488,21 @@ a {
     }
 
     .navbar-dropdown-menu__features {
-        top: 65px;
-        left: 125px;
-        width: 153px;
-        height: 160px;
+        top: 4.06rem;
+        left: 7.81rem;
+        width: 9.56rem;
+        height: 10rem;
     }
 
     .navbar-dropdown-menu__company {
-        top: 65px;
-        left: 320px;
-        width: 116px;
-        height: 128px;
+        top: 4.06rem;
+        left: 20rem;
+        width: 7.25rem;
+        height: 7.81rem;
     }
 
     .navbar-dropdown-menu__link {
-        
-        font-size: 14px;
+        font-size: .87rem;
         margin: .6rem ;
     }
 
@@ -519,12 +518,12 @@ a {
 
     .navbar-options__link,
     .navbar-options__button {
-        font-size: 14px;
-        margin: 0 20px;
+        font-size: .87rem;
+        margin: 0 1.25rem;
     }
 
     .navbar-options__link--dropdown {
-        width: 79px ;
+        width: 4.93rem;
     }
 
     .navbar-links {
@@ -540,9 +539,9 @@ a {
     }
 
     .navbar__logo {
-        min-width: 83px;
-        min-height: 26px;
-        margin: 0 40px;
+        min-width: 5.18rem;
+        min-height: 1.62rem;
+        margin: 0 2.5rem;
     }
 
     .navbar {
